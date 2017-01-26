@@ -284,6 +284,11 @@ procedure updateDurationTable: .durTableName$, .basename$, .rawSoundName$, .newS
 	.durationRaw = Get total duration
 	.amplitudeRaw = Get intensity (dB)
 
+	To Intensity: 100, 0, "yes"
+	.maxIntensityRaw = Get maximum: 0, 0, "Parabolic"
+	selectObject: "Intensity " + .basename$
+	Remove
+
 	selectObject: .newSoundName$
 	.durationNew = Get total duration
 	.amplitudeNew = Get intensity (dB)
@@ -293,9 +298,11 @@ procedure updateDurationTable: .durTableName$, .basename$, .rawSoundName$, .newS
 	Append row
 	.currRows = Get number of rows
 	
+
 	Set string value: .currRows, "Token", .basename$
 	Set numeric value: .currRows, "DurationRaw", .durationRaw
 	Set numeric value: .currRows, "AmplitudeRaw", .amplitudeRaw
+	Set numeric value: .currRows, "MaxAmplitudeRaw", .maxIntensityRaw
 	Set numeric value: .currRows, "DurationNoPauses", .durationNew
 	Set numeric value: .currRows, "AmplitudeNoPauses", .amplitudeNew
 endproc
@@ -344,7 +351,7 @@ file_count = Get number of strings
 # Table that will store the durations of tokens
 durName$ = "TokenDurations"
 durTableName$ = "Table 'durName$'"
-Create Table with column names: durName$, 0, "Token DurationRaw AmplitudeRaw DurationNoPauses AmplitudeNoPauses"
+Create Table with column names: durName$, 0, "Token DurationRaw AmplitudeRaw MaxAmplitudeRaw DurationNoPauses AmplitudeNoPauses"
 @appendLogLine: "created Table " + durName$
 
 tierToCheck$ = "words"
@@ -391,5 +398,6 @@ outfile$ = "'directory_to_check$'/'what_to_name_table_file$'.csv"
 Save as comma-separated file: outfile$
 Remove
 @appendLogLine: "Saving 'outfile$'"
+
 
 
