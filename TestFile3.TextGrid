@@ -1,0 +1,76 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 100 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 100 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5376707995951417 
+            text = "sil" 
+        intervals [2]:
+            xmin = 1.5376707995951417 
+            xmax = 7.1123798076923075 
+            text = "word222222" 
+        intervals [3]:
+            xmin = 7.1123798076923075 
+            xmax = 11.164916497975709 
+            text = "sp" 
+        intervals [4]:
+            xmin = 11.164916497975709 
+            xmax = 17.945502277327936 
+            text = "111ssd" 
+        intervals [5]:
+            xmin = 17.945502277327936 
+            xmax = 23.460905870445348 
+            text = "wordaasda" 
+        intervals [6]:
+            xmin = 23.460905870445348 
+            xmax = 28.225107540485833 
+            text = "sp" 
+        intervals [7]:
+            xmin = 28.225107540485833 
+            xmax = 100 
+            text = "sil" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 100 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.297064777327935 
+            text = "1" 
+        intervals [2]:
+            xmin = 3.297064777327935 
+            xmax = 8.931079200404858 
+            text = "2" 
+        intervals [3]:
+            xmin = 8.931079200404858 
+            xmax = 14.505788208502024 
+            text = "3" 
+        intervals [4]:
+            xmin = 14.505788208502024 
+            xmax = 19.171147520242915 
+            text = "4" 
+        intervals [5]:
+            xmin = 19.171147520242915 
+            xmax = 23.2039157388664 
+            text = "5" 
+        intervals [6]:
+            xmin = 23.2039157388664 
+            xmax = 27.098304655870447 
+            text = "6" 
+        intervals [7]:
+            xmin = 27.098304655870447 
+            xmax = 100 
+            text = "6" 
